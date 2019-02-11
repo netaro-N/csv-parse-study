@@ -18,3 +18,7 @@ let res = csvParse(data, {
 });
 
 console.log(res);
+console.log(res[50]);
+console.log(res[50].gameNumber);
+console.log(res[50]['gameNumber']);
+console.log(res[50]['時間']);
