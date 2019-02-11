@@ -6,6 +6,15 @@ const csvParse = require('csv-parse/lib/sync'); // requiring sync module
 const file = 'input.csv';
 let data = fs.readFileSync(file);
 
-let res = csvParse(data);
+let res = csvParse(data, {
+  delimiter: ',', 
+  rowDelimiter: 'auto', 
+  quote: '"', 
+  escape: '"', 
+  columns: true, 
+  comment: '#', 
+  skip_empty_line: true, 
+  trim: false
+});
 
 console.log(res);
